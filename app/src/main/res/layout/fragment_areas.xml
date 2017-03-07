@@ -1,0 +1,110 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="corbinbyers.balancingact1.AreasFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="400dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:id="@+id/scrollView"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearButtons">
+    <!--
+    <Button
+        android:id="@+id/buttonhealth"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="+ HEALTH"
+        android:textSize="18sp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="25dip"
+        android:background="@color/colorPrimaryLight"/>
+
+    <Button
+        android:id="@+id/buttonfinance"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="+ finance"
+        android:textSize="18sp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="25dip"
+        android:background="@color/colorPrimaryLight"/>
+
+    <Button
+        android:id="@+id/buttonstudy"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="+ study"
+        android:textSize="18sp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="25dip"
+        android:background="@color/colorPrimaryLight"/>
+    <Button
+        android:id="@+id/buttonsocial"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="+ social"
+        android:textSize="18sp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="25dip"
+        android:background="@color/colorPrimaryLight"/>
+
+    <Button
+        android:id="@+id/buttonreligion"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="+ Religion"
+        android:textSize="18sp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="25dip"
+        android:background="@color/colorPrimaryLight"/>
+        -->
+    <Button
+        android:id="@+id/buttonother"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="+ New Area"
+        android:textSize="18sp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="25dip"
+        android:background="@color/colorPrimaryLight"/>
+
+
+    </LinearLayout>
+</ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/lifeareas_intro"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryText"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:id="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/scrollView" />
+</RelativeLayout>
+

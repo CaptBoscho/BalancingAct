@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Goal Calendar" />
+        <item
+            android:id="@+id/nav_graphs"
+            android:icon="@drawable/ic_assessment_black_24dp"
+            android:title="Balance Graphs" />
+        <item
+            android:id="@+id/nav_areas"
+            android:icon="@drawable/ic_donut_small_black_24dp"
+            android:title="Life Areas" />
+        <item
+            android:id="@+id/nav_goals"
+            android:icon="@drawable/ic_check_box_black_24dp"
+            android:title="Goals" />
+
+    </group>
+
+    <item android:title="Account Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_account"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="My Account" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Settings" />
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send Feedback" />
+
+        </menu>
+    </item>
+
+</menu>

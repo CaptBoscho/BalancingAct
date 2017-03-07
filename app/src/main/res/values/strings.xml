@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Balancing Act</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="lifeareas_intro">Select Life-Areas to Balance</string>
+
+    <string name="goals_intro">Add Goals to Life-Areas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
