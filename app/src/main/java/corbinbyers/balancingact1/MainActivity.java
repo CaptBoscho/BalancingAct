@@ -85,6 +85,10 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    /*
+    This function are the buttons in the Nav menu. The setTitle changes the title on the toolbar
+
+     */
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
