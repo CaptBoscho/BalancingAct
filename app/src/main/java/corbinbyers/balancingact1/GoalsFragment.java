@@ -52,15 +52,16 @@ public class GoalsFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         goalLayout = (LinearLayout)getView().findViewById(R.id.linearGoals);
+        System.out.println("Hello there");
+        balanceDb = BalanceDb.getInstance(getContext());
+        List<LifeArea> areas = getLifeAreas();
+        drawLifeAreas(areas);
     }
 
     @Override
     public void onResume(){
         super.onResume();
-        System.out.println("Hello there");
-        balanceDb = BalanceDb.getInstance(getContext());
-        List<LifeArea> areas = getLifeAreas();
-        drawLifeAreas(areas);
+
     }
 
     private List<LifeArea> getLifeAreas(){
@@ -89,7 +90,7 @@ public class GoalsFragment extends Fragment {
 
     private void drawLifeAreas(List<LifeArea> areas){
         for(LifeArea area : areas){
-            RelativeLayout rel = new RelativeLayout(getContext());
+            final RelativeLayout rel = new RelativeLayout(getContext());
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                     RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.WRAP_CONTENT
             );
@@ -121,6 +122,9 @@ public class GoalsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     TextView newGoal = new TextView(getContext());
+                    //popups and stuff
+                    //
+                    rel.addView(newGoal);
                 }
             });
 
@@ -132,6 +136,7 @@ public class GoalsFragment extends Fragment {
             ll.addView(addGoal);
 
             rel.addView(ll);
+
             goalLayout.addView(rel);
         }
     }

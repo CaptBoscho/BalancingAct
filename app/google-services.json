@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "147262648670",
+    "firebase_url": "https://balancingact1-56802.firebaseio.com",
+    "project_id": "balancingact1-56802",
+    "storage_bucket": "balancingact1-56802.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147262648670:android:ffa2ca1194f87ee6",
+        "android_client_info": {
+          "package_name": "corbinbyers.balancingact1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147262648670-4ev49n3bl8sa183avksqqlbptc360u41.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "corbinbyers.balancingact1",
+            "certificate_hash": "dbbe108f6f89d564fdaca612ad30a1bc41317fa7"
+          }
+        },
+        {
+          "client_id": "147262648670-eq9iur5pp8tvo345iv889oqhi680803h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVfX4D0TYWbyCNj-vk6zPbhmcLZ6aNus0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147262648670-eq9iur5pp8tvo345iv889oqhi680803h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

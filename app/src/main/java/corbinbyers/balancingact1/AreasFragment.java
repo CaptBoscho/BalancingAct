@@ -79,17 +79,43 @@ public class AreasFragment  extends Fragment implements
 
         createDBTable();
 
+        System.out.println("****** lifeareas size: " + allAreas.size());
+        if(balanceDB == null){
+            balanceDB = BalanceDb.getInstance(getContext());
+        }
+        SQLiteDatabase reader = balanceDB.getReadableDatabase();
+        String[] projection = {BalanceDb.LifeEntry.selectedColumn};
+        String where = BalanceDb.LifeEntry.nameColumn + " = ?";
+
+        reader = balanceDB.getReadableDatabase();
+        String[] proj = {"*"};
+        Cursor cursor = reader.query(BalanceDb.LifeEntry.Table_Name, proj, null, null,
+                null, null, null);
+        int index = 0;
+        while(cursor.moveToNext()){
+            System.out.println("TESTING AAA");
+            String name = cursor.getString(cursor.getColumnIndex(BalanceDb.LifeEntry.nameColumn));
+            int selected = cursor.getInt(
+                    cursor.getColumnIndex(BalanceDb.LifeEntry.selectedColumn));
+            int id = cursor.getInt(
+                    cursor.getColumnIndex(BalanceDb.LifeEntry.stringID));
+            allAreas.add(createButton(name,index,selected,false));
+            allSelected.add(selected);
+            index++;
+        }
+
+
         for(int i=0; i<allAreas.size(); i++){
-            final int index = i;
+            final int index2 = i;
             allAreas.get(i).setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v){
-                    System.out.println("index: " + index);
-                    if(allSelected.get(index) == 1){
+                    System.out.println("index: " + index2);
+                    if(allSelected.get(index2) == 1){
                         v.setBackgroundColor(getResources().getColor(R.color.colorPrimaryLight));
-                        setSelected(index, 0);
+                        setSelected(index2, 0);
                     } else{
                         v.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                        setSelected(index, 1);
+                        setSelected(index2, 1);
                     }
                 }
             });
@@ -203,13 +229,7 @@ public class AreasFragment  extends Fragment implements
     @Override
     public void onResume(){
         super.onResume();
-        System.out.println("****** lifeareas size: " + allAreas.size());
-        if(balanceDB == null){
-            balanceDB = BalanceDb.getInstance(getContext());
-        }
-        SQLiteDatabase reader = balanceDB.getReadableDatabase();
-        String[] projection = {BalanceDb.LifeEntry.selectedColumn};
-        String where = BalanceDb.LifeEntry.nameColumn + " = ?";
+
         //Sort order?
         /*
         for(int i=0; i<allAreas.size(); i++){
@@ -229,22 +249,7 @@ public class AreasFragment  extends Fragment implements
                 }
             }
         }*/
-        reader = balanceDB.getReadableDatabase();
-        String[] proj = {"*"};
-        Cursor cursor = reader.query(BalanceDb.LifeEntry.Table_Name, proj, null, null,
-                null, null, null);
-        int index = 0;
-        while(cursor.moveToNext()){
-            System.out.println("TESTING AAA");
-            String name = cursor.getString(cursor.getColumnIndex(BalanceDb.LifeEntry.nameColumn));
-            int selected = cursor.getInt(
-                    cursor.getColumnIndex(BalanceDb.LifeEntry.selectedColumn));
-            int id = cursor.getInt(
-                    cursor.getColumnIndex(BalanceDb.LifeEntry.stringID));
-            allAreas.add(createButton(name,index,selected,false));
-            allSelected.add(selected);
-            index++;
-        }
+
 
         System.out.println("On Resume: ");
         printDB();
